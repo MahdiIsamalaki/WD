@@ -1,0 +1,19 @@
+cloudflared.exe
+tools/__pycache__/
+*.pyc
+
+# Files not needed for web deployment
+assets/sprites/
+assets/video/frames/
+assets/video/ai_frames/
+assets/video/ai_raw.mp4
+assets/video/ai_raw2.mp4
+assets/video/calib.mp4
+assets/video/ff_*.png
+assets/video/first_frame.png
+assets/video/gen_loop.log
+assets/video/tunnel.log
+assets/video/tunnel.log.err
+assets/video/tunnel_url.txt
+assets/gate-rose.jpg
+assets/rose_c*.jpg
