@@ -82,7 +82,7 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
 </head>
 <body class="lock">
 <div class="gate" id="gate" role="button" tabindex="0" aria-label="باز کردن دعوتنامه">
-  <video class="gate-video" id="gateVideo" src="assets/video/Petals.mp4" preload="auto" playsinline muted></video>
+  <video class="gate-video" id="gateVideo" src="assets/video/Petals.mp4" preload="auto" playsinline></video>
   <div class="wax" id="wax" style="display:none"><span class="half hl"><em>♡</em></span><span class="half hr"><em>♡</em></span></div>
   <div class="gate-hint">برای باز شدن کلیک کنید<i>↓</i></div>
 </div>
@@ -168,18 +168,12 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
 <script>
 const gate=document.getElementById('gate'),gvid=document.getElementById('gateVideo'),wax=document.getElementById('wax'),ask=document.getElementById('ask');
 let AC=null;const ac=()=>AC||(AC=new(window.AudioContext||window.webkitAudioContext)());
-function burst(t,dur,type,freq,q,vol,slide){const c=ac(),n=Math.max(1,c.sampleRate*dur|0),b=c.createBuffer(1,n,c.sampleRate),d=b.getChannelData(0);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,1.6);const s=c.createBufferSource();s.buffer=b;const f=c.createBiquadFilter();f.type=type;f.frequency.setValueAtTime(freq,t);if(slide)f.frequency.exponentialRampToValueAtTime(slide,t+dur);f.Q.value=q;const g=c.createGain();g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.001,t+dur);s.connect(f);f.connect(g);g.connect(c.destination);s.start(t)}
-function crackSound(){const c=ac();c.resume&&c.resume();const t=c.currentTime;
-burst(t,.09,'bandpass',1600,.8,.7);burst(t+.14,.09,'bandpass',2500,.8,.55);
-const o=c.createOscillator(),g=c.createGain();o.type='triangle';o.frequency.setValueAtTime(150,t);o.frequency.exponentialRampToValueAtTime(40,t+.22);g.gain.setValueAtTime(.4,t);g.gain.exponentialRampToValueAtTime(.001,t+.3);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+.32)}
-function windSound(){try{const c=ac();c.resume&&c.resume();const t=c.currentTime,dur=3.2,n=c.sampleRate*dur|0,b=c.createBuffer(1,n,c.sampleRate),d=b.getChannelData(0);let last=0;for(let i=0;i<n;i++){const w=Math.random()*2-1;last=(last+.02*w)/1.02;d[i]=last*3.2*(.55+.45*Math.sin(Math.PI*i/n))}const s=c.createBufferSource();s.buffer=b;const f=c.createBiquadFilter();f.type='bandpass';f.frequency.setValueAtTime(480,t);f.frequency.linearRampToValueAtTime(950,t+dur*.6);f.Q.value=.6;const g=c.createGain();g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(.26,t+dur*.3);g.gain.linearRampToValueAtTime(.0001,t+dur);s.connect(f);f.connect(g);g.connect(c.destination);s.start(t)}catch(e){}}
+/* gate plays the video's own audio; no synthetic sound effects */
 let opened=false,started=false,gateDone=false;
 function openEnvelope(){if(opened)return;opened=true;
-try{crackSound()}catch(e){}
 wax.classList.add('crack');
 const hint=document.querySelector('.gate-hint');if(hint)hint.style.display='none';
-try{gvid.play()}catch(e){}
-setTimeout(()=>{try{windSound()}catch(e){}},400)}
+try{gvid.muted=false;gvid.volume=1;const p=gvid.play();if(p&&p.catch)p.catch(()=>{})}catch(e){}}
 function finishGate(){if(gateDone)return;gateDone=true;gate.classList.add('hide');startInvitation();
 setTimeout(()=>gate.remove(),1700);
 setTimeout(()=>ask.classList.add('show'),1300)}
