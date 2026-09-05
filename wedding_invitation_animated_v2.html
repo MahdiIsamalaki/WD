@@ -13,7 +13,7 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Vazirmatn,sans-serif;overflow-x:hidden}body.lock{overflow:hidden}a{text-decoration:none;color:inherit}button,input,select,textarea{font:inherit}.page{overflow:hidden}.scene{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;padding:72px 20px}.eyebrow{font-family:Amiri,serif;font-size:16px;letter-spacing:0;color:var(--rose)}.serif{font-family:Amiri,serif}.script{font-family:Marhey,Vazirmatn,sans-serif}.center{text-align:center}.gold{color:var(--gold)}
 /* intro / cinematic opening */
 .intro{height:100svh;min-height:620px;background:linear-gradient(180deg,#ffffff 0%,#fef7f9 62%,#fdf0f3 100%);color:var(--ink);position:relative;overflow:hidden}
-.intro-bg{position:absolute;inset:-8%;background-color:#fdeef2;background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(254,248,249,.94)),url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=88') center/cover;filter:saturate(.9);transform:scale(1.06);animation:bgBreath 9s ease-in-out infinite alternate}.intro-vignette{position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,rgba(255,255,255,0) 0 38%,rgba(248,222,229,.4) 100%)}
+.intro-bg{position:absolute;inset:-8%;background-color:#fdeef2;background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(254,248,249,.94)),url('assets/img/hero.jpg') center/cover;filter:saturate(.9);transform:scale(1.06);animation:bgBreath 9s ease-in-out infinite alternate}.intro-vignette{position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,rgba(255,255,255,0) 0 38%,rgba(248,222,229,.4) 100%)}
 .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none}.b1{width:440px;height:440px;background:#ffd9e2;top:-100px;right:-120px;animation:blobA 11s ease-in-out infinite alternate}.b2{width:400px;height:400px;background:#fff0f4;bottom:-120px;left:-110px;animation:blobA 14s ease-in-out infinite alternate-reverse}@keyframes blobA{to{transform:translate(46px,34px) scale(1.12)}}
 @keyframes bgBreath{to{transform:scale(1.12)}}
 .petal{position:absolute;border-radius:70% 30% 70% 30%;background:rgba(194,39,64,.15);filter:blur(.2px);animation:float 7s ease-in-out infinite}.p1{width:110px;height:180px;left:-30px;top:18%;transform:rotate(30deg)}.p2{width:70px;height:120px;right:2%;top:30%;transform:rotate(-28deg);animation-delay:-2s}.p3{width:90px;height:150px;right:10%;bottom:4%;transform:rotate(20deg);animation-delay:-4s}.p4{width:45px;height:80px;left:18%;bottom:12%;transform:rotate(-35deg);animation-delay:-1s}@keyframes float{50%{translate:12px -24px;rotate:5deg}}
@@ -53,7 +53,7 @@
 /* location */
 .location{background:#fef8f9}.map-card{margin:38px auto 0;max-width:760px;background:#fff;padding:9px;border-radius:30px;overflow:hidden;box-shadow:0 25px 60px rgba(169,30,56,.12)}.map-art{height:260px;background:linear-gradient(135deg,#fef5f7,#fbe9ed);position:relative;overflow:hidden;border-radius:22px}.road{position:absolute;background:rgba(255,255,255,.75);height:18px;rotate:18deg;width:130%;top:42%;left:-15%;box-shadow:0 38px 0 rgba(255,255,255,.65)}.road2{rotate:-33deg;top:64%;height:12px}.pin{position:absolute;left:50%;top:50%;translate:-50% -70%;width:32px;height:32px;border-radius:50% 50% 50% 0;background:var(--wine);rotate:-45deg;box-shadow:0 8px 25px rgba(194,39,64,.35);animation:pinPulse 2.2s ease-in-out infinite}@keyframes pinPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}.pin:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#fff;left:11px;top:11px}.map-label{padding:22px 12px}.map-label h3{font:400 28px var(--nastaliq);margin:0;line-height:2}.map-label p{color:var(--soft);font-size:13px;margin:4px 0 15px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#d42f4b,#a91e38);color:#fff;padding:12px 32px;border-radius:999px;font-size:12.5px;box-shadow:0 8px 22px rgba(194,39,64,.28);transition:transform .35s var(--ease),box-shadow .35s;position:relative;overflow:hidden}.btn:after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.8s ease-in-out infinite}@keyframes shine{0%,55%{left:-60%}100%{left:135%}}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(194,39,64,.25)}
 /* ending */
-.end{min-height:88svh;background-color:#fdf1f4;background:linear-gradient(rgba(255,255,255,.74),rgba(254,249,250,.95)),url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1600&q=85') center/cover;color:var(--ink);text-align:center}.end h2{font:400 clamp(40px,10vw,72px) var(--nastaliq);line-height:2.1;margin:10px 0;text-shadow:0 3px 26px rgba(194,39,64,.2)}.end p{color:var(--soft);font-size:13px}.end .names{font:400 40px var(--nastaliq);color:var(--rose);margin-top:20px;line-height:2;text-shadow:0 2px 18px rgba(194,39,64,.25)}.footer{text-align:center;padding:18px;background:#fef8f9;color:var(--soft);font-size:10px}
+.end{min-height:88svh;background-color:#fdf1f4;background:linear-gradient(rgba(255,255,255,.74),rgba(254,249,250,.95)),url('assets/img/finale.jpg') center/cover;color:var(--ink);text-align:center}.end h2{font:400 clamp(40px,10vw,72px) var(--nastaliq);line-height:2.1;margin:10px 0;text-shadow:0 3px 26px rgba(194,39,64,.2)}.end p{color:var(--soft);font-size:13px}.end .names{font:400 40px var(--nastaliq);color:var(--rose);margin-top:20px;line-height:2;text-shadow:0 2px 18px rgba(194,39,64,.25)}.footer{text-align:center;padding:18px;background:#fef8f9;color:var(--soft);font-size:10px}
 /* progress + music */
 .progress{position:fixed;right:13px;top:50%;translate:0 -50%;z-index:10;display:flex;flex-direction:column;gap:9px}.progress i{width:5px;height:5px;border-radius:50%;background:rgba(194,39,64,.25);transition:.4s}.progress i.active{height:20px;border-radius:5px;background:var(--wine)}.music{position:fixed;left:15px;top:15px;z-index:12;width:38px;height:38px;border-radius:50%;border:1px solid rgba(194,39,64,.25);background:rgba(255,255,255,.65);color:var(--wine);cursor:pointer;backdrop-filter:blur(8px);box-shadow:0 6px 18px rgba(194,39,64,.25)}#petals{position:fixed;inset:0;z-index:6;pointer-events:none}
 /* cinematic video gate */
@@ -113,7 +113,7 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
     <div class="seal"><span>♡</span></div>
     <div class="eyebrow">به نام عشق</div>
     <h1>امیر <span class="amp">&</span> شقایق</h1>
-    <div class="date">پنجشنبه، ۲۵ مهر ۱۴۰۵ · ساعت ۱۹:۰۰</div>
+    <div class="date">پنجشنبه، ۲۳ مهر ۱۴۰۵ · ساعت ۱۹:۰۰</div>
   </div>
   <a class="enter" href="#story">برای دیدن دعوتنامه</a>
 </section>
@@ -140,7 +140,7 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
   <div class="section-inner center">
     <div class="eyebrow reveal">قرار ما</div><h2 class="section-title reveal delay1">یک شب برای به یاد ماندن</h2>
     <div class="event-grid">
-      <article class="event-item reveal"><div class="event-icon">♡</div><h3>جشن عروسی</h3><p>پنجشنبه، ۲۵ مهر ۱۴۰۵</p></article>
+      <article class="event-item reveal"><div class="event-icon">♡</div><h3>جشن عروسی</h3><p>پنجشنبه، ۲۳ مهر ۱۴۰۵</p></article>
       <article class="event-item reveal delay1"><div class="event-icon">◷</div><h3>ساعت</h3><p>ورود ۱۹:۰۰<br>شروع مراسم ۱۹:۳۰</p></article>
       <article class="event-item reveal delay2"><div class="event-icon">⌖</div><h3>تالار رویال</h3><p>تهران، خیابان نمونه<br>کوچه بهار، پلاک ۱۲۳</p></article>
     </div>
@@ -154,7 +154,7 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
     <div class="tl">
       <div class="tl-item reveal"><div class="tl-dot">♡</div><h3>آشنایی</h3><p>از یک نگاه ساده شروع شد</p></div>
       <div class="tl-item reveal delay1"><div class="tl-dot">♡</div><h3>نامزدی</h3><p>حلقه‌ای برای یک عمر همراهی</p></div>
-      <div class="tl-item reveal delay2"><div class="tl-dot">♡</div><h3>جشن عروسی</h3><p>۲۵ مهر ۱۴۰۵ · تالار رویال</p></div>
+      <div class="tl-item reveal delay2"><div class="tl-dot">♡</div><h3>جشن عروسی</h3><p>۲۳ مهر ۱۴۰۵ · تالار رویال</p></div>
     </div>
   </div>
 </section>
@@ -162,7 +162,7 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
 <section class="scene photo-story" id="photo1">
   <div class="section-inner center">
     <div class="eyebrow reveal">دو نفر، یک قصه</div><h2 class="section-title reveal delay1">لحظه‌های ما</h2>
-    <div class="photo-wrap reveal delay2"><img class="photo" loading="lazy" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1100&q=88" alt="نمونه عکس عروس و داماد"><div class="photo-frame"></div></div>
+    <div class="photo-wrap reveal delay2"><img class="photo" loading="lazy" src="assets/img/couple.jpg" alt="نمونه عکس عروس و داماد"><div class="photo-frame"></div></div>
     <div class="caption reveal delay3">هر تصویر، بخشی از قصه‌ی ماست.</div>
   </div>
 </section>
@@ -171,9 +171,9 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
   <div class="section-inner center">
     <div class="eyebrow reveal">memories</div><h2 class="section-title reveal delay1">خاطره‌هایی که می‌مانند</h2>
     <div class="gallery-grid">
-      <div class="g-large reveal"><img class="g-img" loading="lazy" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=88" alt="مراسم عروسی"></div>
-      <div class="g-small reveal delay1"><img class="g-img" loading="lazy" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=88" alt="گل های مراسم"></div>
-      <div class="g-small reveal delay2"><img class="g-img" loading="lazy" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=88" alt="جشن عروسی"></div>
+      <div class="g-large reveal"><img class="g-img" loading="lazy" src="assets/img/gallery-1.jpg" alt="مراسم عروسی"></div>
+      <div class="g-small reveal delay1"><img class="g-img" loading="lazy" src="assets/img/gallery-2.jpg" alt="گل های مراسم"></div>
+      <div class="g-small reveal delay2"><img class="g-img" loading="lazy" src="assets/img/gallery-3.jpg" alt="جشن عروسی"></div>
     </div>
   </div>
 </section>
@@ -198,7 +198,6 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
 </main>
 <script>
 const gate=document.getElementById('gate'),gvid=document.getElementById('gateVideo'),wax=document.getElementById('wax'),ask=document.getElementById('ask');
-let AC=null;const ac=()=>AC||(AC=new(window.AudioContext||window.webkitAudioContext)());
 /* gate plays the video's own audio; no synthetic sound effects */
 let opened=false,started=false,gateDone=false;
 function openEnvelope(){if(opened)return;opened=true;
@@ -217,14 +216,11 @@ gate.addEventListener('click',openEnvelope);
 gate.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openEnvelope()}});
 document.getElementById('askYes').addEventListener('click',()=>{ask.classList.remove('show');playMusic();setMusicUI(true)});
 document.getElementById('askNo').addEventListener('click',()=>ask.classList.remove('show'));
-// ambient music: synthesized pads + plucks over a 4-chord loop
-let master=null,musicOn=false,schedTimer=null,bar=0;
-const PROG=[[220,261.63,329.63],[174.61,220,261.63],[196,246.94,293.66],[164.81,196,246.94]];
-function voice(f,t,dur,vol,type){const c=ac(),o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=f;o.connect(g);g.connect(master);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+Math.min(.8,dur*.3));g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.start(t);o.stop(t+dur+.05)}
-function playMusic(){if(musicOn)return;musicOn=true;const c=ac();c.resume&&c.resume();master=c.createGain();master.gain.value=.8;master.connect(c.destination);
-const step=()=>{if(!musicOn)return;const ch=PROG[bar%4],t=c.currentTime+.06;ch.forEach(f=>{voice(f,t,3.7,.05,'sine');voice(f/2,t,3.7,.035,'sine')});[0,.95,1.9,2.85].forEach((o,i)=>voice(ch[i%3]*2,t+o,.7,.055,'triangle'));bar++};
-step();schedTimer=setInterval(step,3800)}
-function stopMusic(){musicOn=false;clearInterval(schedTimer);if(master){const m=master;m.gain.setTargetAtTime(0,ac().currentTime,.4);setTimeout(()=>m.disconnect(),1500);master=null}setMusicUI(false)}
+// background music: real audio file on loop
+const bgm=new Audio('assets/music/Sattar - Tak Khal (1).mp3');bgm.loop=true;bgm.preload='auto';bgm.volume=.85;
+let musicOn=false;
+function playMusic(){if(musicOn)return;try{const p=bgm.play();if(p&&p.catch)p.catch(()=>{});musicOn=true}catch(e){}}
+function stopMusic(){musicOn=false;try{bgm.pause()}catch(e){}setMusicUI(false)}
 let musicUI=false;
 function setMusicUI(on){musicUI=on;music.textContent=on?'◼':'♫';music.style.transform=on?'rotate(180deg)':''}
 // reveal-on-scroll + progress
@@ -232,10 +228,10 @@ const sections=[...document.querySelectorAll('main section')];
 const dots=[...document.querySelectorAll('.progress i')];
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.reveal').forEach(x=>x.classList.add('show'));e.target.querySelectorAll('.photo').forEach(x=>x.classList.add('show'));const i=sections.indexOf(e.target);if(i>=0)dots.forEach((d,n)=>d.classList.toggle('active',n===Math.min(i,dots.length-1)));}})},{threshold:.22});
 sections.forEach(s=>io.observe(s));
-// countdown demo: 25 Mehr 1405 ~= 17 Oct 2026, 19:00 Tehran for prototype
-const target=new Date('2026-10-17T19:00:00+03:30').getTime();
+// countdown: 23 Mehr 1405 = 15 Oct 2026, 19:00 Tehran
+const target=new Date('2026-10-15T19:00:00+03:30').getTime();
 function tick(){let d=target-Date.now();if(d<0)d=0;document.getElementById('days').textContent=Math.floor(d/86400000);d%=86400000;document.getElementById('hours').textContent=Math.floor(d/3600000);d%=3600000;document.getElementById('minutes').textContent=Math.floor(d/60000);d%=60000;document.getElementById('seconds').textContent=Math.floor(d/1000)}tick();setInterval(tick,1000);
-// music button toggles the synthesized loop
+// music button toggles the audio file
 const music=document.querySelector('.music');
 music.addEventListener('click',()=>{if(musicUI)stopMusic();else{playMusic();setMusicUI(true)}});
 // falling rose petals over the whole page
