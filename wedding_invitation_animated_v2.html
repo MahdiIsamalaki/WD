@@ -75,8 +75,8 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
 .wax.crack .hr{animation:waxR .95s cubic-bezier(.36,.07,.55,.97) forwards}
 @keyframes waxL{18%{translate:0 0;rotate:0}35%{filter:brightness(1.4)}100%{translate:-92px 200px;rotate:-160deg;opacity:0}}
 @keyframes waxR{18%{translate:0 0;rotate:0}35%{filter:brightness(1.4)}100%{translate:92px 200px;rotate:160deg;opacity:0}}
-.gate-hint{position:absolute;bottom:7%;width:100%;text-align:center;z-index:3;font-size:13px;letter-spacing:0;color:var(--rose);text-shadow:0 1px 10px rgba(255,255,255,.9);animation:pulse 2.2s infinite}
-.gate-hint i{display:block;font-style:normal;font-size:24px;color:var(--rose);margin-top:8px}
+.gate-hint{position:absolute;bottom:7%;width:100%;text-align:center;z-index:3;font-size:13px;letter-spacing:0;color:#f6f8fa;animation:pulse 2.2s infinite}.gate-hint span{display:inline-block;background:rgba(28,12,16,.34);border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:10px 26px;text-shadow:0 1px 8px rgba(0,0,0,.55);box-shadow:0 4px 20px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.3);backdrop-filter:blur(6px)}
+.gate-hint i{display:block;font-style:normal;font-size:22px;color:#f6f8fa;margin-top:10px;text-shadow:0 0 18px rgba(255,255,255,.9),0 2px 8px rgba(60,10,20,.6)}
 .gate.hide .gate-hint{display:none}
 @media(max-width:700px){.scene{padding:65px 18px}.event-grid{grid-template-columns:1fr;gap:10px}.event-item{min-height:145px;padding:22px}.gallery-grid{grid-template-columns:1fr}.g-large{height:430px;grid-row:auto}.g-small{height:220px}.count{width:68px;height:76px}.count-grid{gap:7px}.flower-a{width:140px;height:140px}.flower-b{width:160px;height:160px}.progress{right:7px}.tl{flex-direction:column;align-items:center}.tl:before{display:none}.tl-item{width:100%;max-width:340px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -86,7 +86,7 @@ body:not(.started) .reveal-curtain,body:not(.started) .intro-content,body:not(.s
 <div class="gate" id="gate" role="button" tabindex="0" aria-label="باز کردن دعوتنامه">
   <video class="gate-video" id="gateVideo" src="assets/video/Petals.mp4" preload="auto" playsinline></video>
   <div class="wax" id="wax" style="display:none"><span class="half hl"><em>♡</em></span><span class="half hr"><em>♡</em></span></div>
-  <div class="gate-hint">برای باز شدن کلیک کنید<i>↓</i></div>
+  <div class="gate-hint"><span>برای باز شدن کلیک کنید</span><i>↓</i></div>
 </div>
 <div class="reveal-curtain"></div>
 <button class="music" aria-label="موسیقی">♫</button>
