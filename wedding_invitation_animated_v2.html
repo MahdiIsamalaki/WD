@@ -236,13 +236,21 @@ body:not(.started) .intro-content,body:not(.started) .intro .seal{animation-play
  .addr-route{border-radius:22px;background:linear-gradient(145deg,var(--warm-white),var(--cream));padding:20px;margin-top:16px}
  .addr-badge{border-radius:999px;letter-spacing:.03em}
  .gate-hint span{border-radius:999px;letter-spacing:.02em}
- @media(max-width:700px){
+  /* ——— readability fix: hero date + enter hint ——— */
+  .intro-content .date{color:var(--espresso);font-weight:700;font-size:19px;line-height:1.9;background:rgba(247,243,237,.94);border:1px solid rgba(168,135,82,.7);border-radius:999px;padding:10px 28px;margin-top:16px;box-shadow:0 10px 26px rgba(64,56,45,.18),inset 0 1px 0 #fff;text-shadow:none}
+  .enter{background:linear-gradient(135deg,var(--deep-taupe),var(--espresso));color:var(--porcelain);border:1px solid rgba(216,193,143,.8);border-radius:999px;padding:12px 32px 10px;font-family:Vazirmatn,sans-serif;font-size:15px;font-weight:600;line-height:1.8;text-shadow:none;box-shadow:0 14px 30px rgba(64,56,45,.38),inset 0 1px 0 rgba(247,243,237,.25);opacity:1}
+  .enter:after{color:var(--pale-gold);text-shadow:none;animation:none}
+  .enter{animation:enterIn 1s var(--ease) 2.65s forwards,enterPulse 2.2s ease-in-out 3.65s infinite}
+  @keyframes enterIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes enterPulse{0%,100%{opacity:1;transform:translateY(0)}50%{opacity:1;transform:translateY(6px)}}
+  @media(max-width:700px){
    .scene{padding:58px 16px}
    .intro-content{padding:30px 18px 28px;outline-offset:5px}
    .intro-content:before{width:110px;height:110px;left:-58px;top:-58px}
    .intro-content:after{width:7px;height:7px;right:28px;bottom:26px}
-   .intro-content h1{font-size:clamp(44px,13vw,68px)}
-   .date{font-size:14px;padding-inline:12px}
+    .intro-content h1{font-size:clamp(44px,13vw,68px)}
+    .intro-content .date{font-size:16px;padding:9px 20px}
+    .enter{font-size:14px;padding:11px 28px 9px;bottom:22px}
    .story-card{padding:34px 20px}
    .story-card:after{inset:8px}
    .story-quote{font-size:clamp(23px,6.4vw,30px);line-height:2.35;margin-top:22px}
