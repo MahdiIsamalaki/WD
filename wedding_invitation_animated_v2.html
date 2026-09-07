@@ -121,9 +121,27 @@ body:not(.started) .intro-content,body:not(.started) .intro .seal{animation-play
  .section-title{letter-spacing:-.02em;text-shadow:0 8px 28px rgba(89,75,53,.08)}
  .section-title:after{height:1px;width:118px;margin-top:18px}
  .lead{color:var(--text-muted);font-weight:300}
- .intro{background:linear-gradient(145deg,var(--porcelain) 0%,var(--warm-white) 58%,var(--cream) 100%)}
- .intro-bg{filter:saturate(.72) contrast(.96);}
- .intro-vignette{background:radial-gradient(ellipse at center,rgba(247,243,237,.03) 0 24%,rgba(64,56,45,.25) 100%);mix-blend-mode:multiply}
+  .intro{background:linear-gradient(145deg,var(--porcelain) 0%,var(--warm-white) 58%,var(--cream) 100%)}
+  .intro-bg{filter:saturate(.72) contrast(.96);}
+  /* Warm, living atmosphere layered over the photograph without touching the hero content. */
+  .intro-bg:before{content:"";position:absolute;inset:-12%;pointer-events:none;opacity:.72;mix-blend-mode:screen;background:
+    radial-gradient(circle at 14% 24%,rgba(216,193,143,.8) 0 1px,transparent 2px),
+    radial-gradient(circle at 27% 66%,rgba(247,243,237,.72) 0 1px,transparent 2px),
+    radial-gradient(circle at 42% 18%,rgba(216,193,143,.7) 0 1px,transparent 2px),
+    radial-gradient(circle at 59% 76%,rgba(247,243,237,.7) 0 1px,transparent 2px),
+    radial-gradient(circle at 76% 34%,rgba(216,193,143,.85) 0 1px,transparent 2px),
+    radial-gradient(circle at 88% 68%,rgba(247,243,237,.65) 0 1px,transparent 2px),
+    radial-gradient(circle at 70% 18%,rgba(247,243,237,.44) 0 2px,transparent 16px),
+    radial-gradient(circle at 19% 78%,rgba(200,169,107,.25) 0 3%,transparent 24%);
+    animation:heroDustDrift 15s ease-in-out infinite alternate}
+  .intro-bg:after{content:"";position:absolute;inset:-20%;pointer-events:none;opacity:.62;mix-blend-mode:screen;background:
+    radial-gradient(ellipse at 74% 18%,rgba(255,236,190,.42) 0,rgba(216,193,143,.16) 18%,transparent 43%),
+    radial-gradient(ellipse at 24% 82%,rgba(200,169,107,.18) 0,transparent 32%),
+    conic-gradient(from 214deg at 76% 16%,transparent 0 25%,rgba(247,243,237,.09) 34%,transparent 44% 100%);
+    filter:blur(12px);animation:heroGlowDrift 18s ease-in-out infinite alternate}
+  @keyframes heroDustDrift{0%{transform:translate3d(-1%,1%,0) scale(1)}50%{transform:translate3d(1%,-1%,0) scale(1.03)}100%{transform:translate3d(-.5%,0,0) scale(1.01)}}
+  @keyframes heroGlowDrift{0%{transform:translate(-3%,2%) scale(.96);opacity:.42}50%{opacity:.72}100%{transform:translate(3%,-2%) scale(1.04);opacity:.6}}
+  .intro-vignette{background:radial-gradient(ellipse at center,rgba(247,243,237,.03) 0 24%,rgba(64,56,45,.25) 100%);mix-blend-mode:multiply}
  .intro-content{width:min(92vw,700px);padding:clamp(26px,5vw,52px) clamp(20px,7vw,72px) clamp(22px,4vw,40px);border:1px solid rgba(247,243,237,.62);outline:1px solid rgba(200,169,107,.36);outline-offset:8px;border-radius:48px 48px 110px 48px;background:linear-gradient(145deg,rgba(247,243,237,.78),rgba(239,231,221,.38));box-shadow:0 26px 80px rgba(64,56,45,.16),inset 0 1px 0 rgba(247,243,237,.85);backdrop-filter:blur(7px)}
  .intro-content:before,.intro-content:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
  .intro-content:before{width:180px;height:180px;left:-92px;top:-94px;border:1px solid rgba(200,169,107,.34);box-shadow:0 0 0 12px rgba(247,243,237,.12),0 0 0 24px rgba(200,169,107,.08)}
